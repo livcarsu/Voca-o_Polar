@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;     
+} 
+
+body {
+    width: 100%;
+    background-color: #f9f3e8;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ESTILO DO HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f3e8;
+    width: 100vw;
+    height: 20vh;
+    font-size: 20px;
+    font-weight: 900;
+    font-style: bold;
+}
+
+.img {
+    width: 33vw;
+    display: flex;
+    padding-left: 70px;
+}
+
+.imgLogo{
+    width: 6vw;
+}
+
+nav {
+    width: 33vw;
+    align-self: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+li {
+    list-style-type: none;
+ 
+}
+
+a {
+    text-decoration: none;
+    color: #5e5d5d;
+    font-weight: bold;
+    
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+.btn {
+    width: 33vw;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 70px;
+    align-self: center;
+}
+
+.imgAcess{
+    height: 6vh;
+}
+
+.imgAcess:hover{
+    cursor: pointer;
+}
+
+/*ESTILO DO MAIN*/
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100vw;
+    height: calc(100vh - 20vh); /* Altura considerando a navbar */
+}
+
+.image-container {
+    width: 100vw;
+    height: calc(100vh - 20vh);
+    display: flex;
+    position: relative;
+   
+}
+
+.image-container img {
+    height: auto;
+    position: absolute;
+
+}
+
+.left-image {
+    left: 0;
+    bottom: 0;
+    max-width: 25%; /* Ajuste conforme necessário */
+}
+
+.right-image {
+    right: 0;
+    bottom: 0;
+    max-width: 35%; /* Ajuste conforme necessário */
+   
+}
+
+.center-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Alinha elementos verticalmente */
+    flex: 1;
+    position: relative;
+    width: 33vw;
+    height: 60vh;
+    text-align: center;
+}
+
+
+
+h1, h2, p {
+    margin: 0;
+    width: 28vw;
+}
+
+h1 {
+    font-size: 3rem; /* Altere conforme necessário */
+    margin-bottom: 0.5rem; /* Espaçamento entre h1 e h2 */
+    font-weight: bold;
+   
+}
+
+h2 {
+    font-size: 1.6rem; /* Altere conforme necessário */
+    line-height: 1.5; /* Espaçamento entre linhas para a quebra de linha */
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+p{
+    font-size: 1.6rem; /* Altere conforme necessário */
+    line-height: 1.5; /* Espaçamento entre linhas para a quebra de linha */
+}
+
+.btnIniciar{
+    background-color: #5ab6c4;
+    color: #1e3557;
+    font-weight: bold;
+    border: none;
+    padding: 10px 22px;
+    font-size: 25px;
+    border-radius: 50px;
+    margin-top: 25px;
+}
+
+.btnIniciar:hover{
+    background-color: #1e3557;
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+/*ESTILO DESCRIÇÃO*/
+
+.left_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Alinha elementos verticalmente */
+    left: 1;
+    position: relative;
+    width: 40vw;
+    height: 50vh;
+    text-align: left;
+    gap: 100px;    
+}
+
+.left_container > img {
+    width: 30%;
+}
+
+.right_container > img{
+    width: 50%;
+}
+
+.right_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Alinha elementos verticalmente */
+    right: 1;
+    position: relative;
+    width: 40vw;
+    height: 50vh;
+    gap: 100px;  
+    text-align: left;
+}
+
+.caixa_texto{
+    width: 20vw; 
+}
+
+.caixa_texto > h2{
+    font-size: 30px;
+}
+
+.caixa_texto > p{
+    font-size: 22px;
+}
+
+
+/*ESTILO FOOTER*/
+
+.image-footer {
+    width: 100vw;
+    height: 15vh; /* Ajuste a altura do footer conforme necessário */
+    
+}
+
+
+
+
+
+.left-hover {
+    cursor: w-resize;
+}
+
+.right-hover {
+    cursor: e-resize;
+}
+
+
+/*CÓDIGO DO CURSOS*/
+
+
+.cursor-ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+    display: none;
+}
+
+.large-circular-cursor {
+    cursor: none;
+}
+
+.large-circular-cursor .cursor-ball {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/**/
+.setinha{
+    position: inherit;
+    right: 0;
+
+}
+
+
