@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-* {
+*,::before,
+::after  {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,14 +10,12 @@
 } 
 
 body {
-    width: 100%;
     background-color: #f9f3e8;
     display: flex;
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
+    min-height: 100vh;
 }
 
 
@@ -95,6 +94,7 @@ main {
     flex-direction: row;
     width: 100vw;
     height: calc(100vh - 20vh); /* Altura considerando a navbar */
+
 }
 
 .image-container {
@@ -190,13 +190,16 @@ p{
     left: 1;
     position: relative;
     width: 40vw;
-    height: 50vh;
+    height: calc(100vh - 20vh);
     text-align: left;
     gap: 100px;    
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .left_container > img {
     width: 30%;
+  
 }
 
 .right_container > img{
@@ -211,7 +214,7 @@ p{
     right: 1;
     position: relative;
     width: 40vw;
-    height: 50vh;
+    height: calc(100vh - 20vh);
     gap: 100px;  
     text-align: left;
 }
@@ -222,6 +225,7 @@ p{
 
 .caixa_texto > h2{
     font-size: 30px;
+    
 }
 
 .caixa_texto > p{
@@ -232,89 +236,155 @@ p{
 /*ESTILO FOOTER*/
 
 .image-footer {
-    width: 100vw;
     height: 15vh; /* Ajuste a altura do footer conforme necessário */
-    
-}
-
-
-
-
-
-.left-hover {
-    cursor: w-resize;
-}
-
-.right-hover {
-    cursor: e-resize;
-}
-
-
-/*CÓDIGO DO CURSOS*/
-
-
-.cursor-ball {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: width 0.2s, height 0.2s, background-color 0.2s;
-    display: none;
-}
-
-.large-circular-cursor {
-    cursor: none;
-}
-
-.large-circular-cursor .cursor-ball {
-    display: block;
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/**/
-.setinha{
-    position: inherit;
-    right: 0;
-
-}
-
-/* Estilos para o modal */
-.modal {
-    display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(19, 68, 106, 0.5);
-    align-items: center;
-    justify-content: center;
+    bottom: 0;
 }
 
-.modal-content {
-    background-color: #f9f3e8;
-    padding: 20px;
-    border-radius: 8px;
+.image-footer-cursos {
+    height: 15vh; /* Ajuste a altura do footer conforme necessário */
+    position: fixed;
+    bottom: 0;
+}
+
+
+
+
+/* STYLE CURSOS */
+
+.carrosel-cursos{
+    width: 80vw; 
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+   
+
+}
+
+.carrosel-cursos > h2{
+    align-self: center;
     text-align: center;
-    max-width: 50%;
-    height: 50%;
+    padding-bottom: 50px;
+
 }
 
-.modal button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #3498db;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.modal button:hover {
-    background-color: #2980b9;
+
+
+#cCarousel {
+  position: relative;
+    width: 60vw;
+  margin: auto;
+ 
 }
+
+#cCarousel .arrow {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 1;
+  font-size: 26px;
+  color: white;
+  background: #00000072;
+  cursor: pointer;
+}
+
+#cCarousel > #prev {
+  left: 0px;
+}
+
+#cCarousel > #next {
+  right: 0px;
+}
+
+#carousel-vp {
+  width: 770px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+  
+}
+
+@media (max-width: 770px) {
+  #carousel-vp {
+    width: 510px;
+  }
+}
+
+@media (max-width: 510px) {
+  #carousel-vp {
+    width: 250px;
+  }
+}
+
+#cCarousel #cCarousel-inner {
+  display: flex;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  gap: 10px;
+  left: 0px;
+}
+
+.cCarousel-item {
+  width: 300px;
+  height: 365px;
+  border-right: 5px solid #467A9C;
+  border-radius: 15px;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+background-color: rgb(255, 255, 255);
+}
+
+.cCarousel-item > img {
+width: 250px;
+height: 300px;
+  object-fit: contain;
+  min-height: 0px;
+  color: white;
+  padding-top: 18px;
+
+
+}
+
+.cCarousel-item .infos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: black;
+
+  width: 270px;
+  
+}
+
+.cCarousel-item .infos > p{
+    font-size: 16px;
+    text-align: center;
+   width: 260px;
+   height: 150px;
+    line-height: 1.7;
+    align-content: center;
+}
+
+.cCarousel-item .infos > h3{
+    font-weight: bold;
+    font-size: 20px;
+}
+
