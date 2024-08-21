@@ -41,6 +41,32 @@
         </div>
         <div class="cursor-ball" id="cursorBall"></div>
     </main>
+
+    <!-- Modais de Alerta -->
+    <!-- Primeira Modal -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <p>(primeiro conteúdo do tutorial)</p>
+            <button onclick="showNextModal('modal2')">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Segunda Modal -->
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <p>(segundo conteúdo do tutorial)</p>
+            <button onclick="showNextModal('modal3')">Próximo</button>
+        </div>
+    </div>
+
+    <!-- Terceira Modal -->
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <p>Você está pronto para começar o teste. Boa sorte!</p>
+            <button onclick="closeModal('modal3')">Iniciar</button>
+        </div>
+    </div>
+    
     <script src="script.js"></script>
 </body>
 </html>
