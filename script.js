@@ -21,6 +21,6 @@ function closeModal(modalId) {
 
     // Redireciona para a página de jogo após o fechamento do modal
     if (modalId === 'modal3') {
-        window.location.href = 'pagina-de-jogo.html'; // Substitua 'pagina-de-jogo.html' pelo caminho da sua página de jogo
+        window.location.href = 'quest1.html'; // Substitua 'pagina-de-jogo.html' pelo caminho da sua página de jogo
     }
 }
