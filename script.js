@@ -24,3 +24,16 @@ function closeModal(modalId) {
         window.location.href = 'quest1.html'; // Substitua 'pagina-de-jogo.html' pelo caminho da sua página de jogo
     }
 }
+
+//controla card com resultados 2° pag.
+function showContent(contentId) {
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.style.display = 'none');
+
+    document.getElementById(contentId).style.display = 'block';
+
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => link.classList.remove('active'));
+
+    document.querySelector(`.nav-link[href="#${contentId}"]`).classList.add('active');
+}
